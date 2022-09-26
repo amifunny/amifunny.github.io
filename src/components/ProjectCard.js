@@ -1,15 +1,44 @@
-import { Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { ImageModal } from "./ImageModal";
 
-export const ProjectCard = ({ title, description, imgUrl }) => {
+export const ProjectCard = ({project, key}) => {
   return (
-    <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
-        <img src={imgUrl} />
-        <div className="proj-txtx">
-          <h4>{title}</h4>
-          <span>{description}</span>
+
+    <Row key={key} className="proj-card">
+      <Col md={12}  className="text-center">
+      
+      {/*--------------------------------------*/}
+      {
+        (project.viewType=="video")?(
+            <iframe width="500" height="250" src={project.viewUrls}
+            title={project.title} frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; fullscreen;" allowfullscreen>
+            </iframe>
+        ):(
+          <ImageModal images={project.viewUrls}/>
+        )
+      }
+      {/*--------------------------------------*/}
+
+      </Col>
+      <Col md={12}>
+        <h3 className="text-center py-2">{project.title}</h3>
+        <p className="text-center">
+          {project.tags.map( tag => (
+            <span className="project-tag">{tag}</span>
+          ))}
+        </p>
+        <p  className="text-center">{project.description}</p>
+        <div className="text-center">
+          {project.liveLink && <a href={project.liveLink}>
+            <button className="mx-3 white-theme-button"><span>Live</span></button>
+          </a>}
+          <a href={project.codeLink}>
+            <button className="mx-3 white-theme-button"><span>Code</span></button>
+          </a>
         </div>
-      </div>
-    </Col>
+      </Col>
+    </Row>
+
   )
 }

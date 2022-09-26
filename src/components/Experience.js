@@ -14,7 +14,6 @@ export const Experience = ({ status, message, onValidated }) => {
       'calendar': 'May 2021 to Jul 2021',
       'description':[
         "Built Django backend application with 5 member team that supported the E-sports website and set up AWS CodeDeploy Pipeline for it",
-        "Conducted technical interviews and recruited new interns to the team",
         "Implemented Postman test cases to validate Restful APIs",
         "Created modules for creating users, tournaments, following users, gaming news and posts, using Django's model, serializer, and views",
         "Utilized MySQL to host database and implemented CRUD operations, pagination, and authentication features"

@@ -53,6 +53,7 @@ export const Skills = () => {
     'Front End' : [
       ['React', <SiReact/>],
       ['Jquery', <SiJquery/>],
+      ['React', <SiReact/>],
       ['Bootstrap', <SiBootstrap/>],
       ['HTML', <SiHtml5/>],
       ['CSS', <SiCss3/>]

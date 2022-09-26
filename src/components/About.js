@@ -11,7 +11,7 @@ export const About = () => {
   
   const aboutLine1 = 'I have passion for coding and creating software. I have been building software for 7 years now. '+
     'Also, I have professional experience in working with 3 emerging startups.'
-  const aboutLine2 =  'I love solving problems, brainstroming ideas and coverting them into innovative products. '+
+  const aboutLine2 =  'I love solving problems, brainstroming ideas and converting them into innovative products. '+
     'Having a sharp eye for product development process helps me prioritize tasks, iterate fast and deliver faster.'
 
   const resumeLink = 'https://drive.google.com/file/d/1K40E0R3F-cspoegemOoXa4Jrl7LBTXN3/view'
