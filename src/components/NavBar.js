@@ -8,7 +8,7 @@ import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-import {SiGithub, SiAngellist} from 'react-icons/si'
+import {SiGithub, SiAngellist, SiLinkedin} from 'react-icons/si'
 
 export const NavBar = () => {
 
@@ -35,6 +35,7 @@ export const NavBar = () => {
 
   const githubLink = 'https://github.com/amifunny/'
   const angelLink = 'https://angel.co/u/hemant-kumar-singh-21'
+  const linkedinLink = 'https://www.linkedin.com/in/hemant-singh-sde'
 
   return (
     <Router>
@@ -56,6 +57,8 @@ export const NavBar = () => {
               <div className="social-icon">
                 <a href={githubLink}><SiGithub className='social-icon-svg'/></a>
                 <a href={angelLink}><SiAngellist className='social-icon-svg'/></a>
+                <a href={linkedinLink}><SiLinkedin className='social-icon-svg'/></a>
+
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

@@ -4,12 +4,13 @@ import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
-import {SiGithub, SiAngellist} from 'react-icons/si'
+import {SiGithub, SiAngellist, SiLinkedin} from 'react-icons/si'
 
 export const Footer = () => {
 
   const githubLink = 'https://github.com/amifunny/'
   const angelLink = 'https://angel.co/u/hemant-kumar-singh-21'
+  const linkedinLink = 'https://www.linkedin.com/in/hemant-singh-sde'
 
   return (
     <footer className="footer">
@@ -23,6 +24,7 @@ export const Footer = () => {
             <div className="social-icon">
               <a href={githubLink}><SiGithub className='social-icon-svg' /></a>
               <a href={angelLink}><SiAngellist className='social-icon-svg' /></a>
+              <a href={linkedinLink}><SiLinkedin className='social-icon-svg'/></a>
             </div>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>

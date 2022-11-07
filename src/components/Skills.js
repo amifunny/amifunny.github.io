@@ -12,7 +12,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import {
   SiPython, SiJavascript,
   SiCplusplus, SiJava,
-  SiReact, SiJquery, SiBootstrap, SiHtml5, SiCss3,
+  SiReact, SiRedux, SiJquery, SiBootstrap, SiHtml5, SiCss3,
   SiFlask, SiDjango, SiExpress, SiMongodb, SiMysql, SiFirebase, SiAmazonaws,
   SiTensorflow, SiNumpy, SiPandas, SiScikitlearn,
   SiGooglechrome,
@@ -52,15 +52,15 @@ export const Skills = () => {
     ],
     'Front End' : [
       ['React', <SiReact/>],
+      ['Redux', <SiRedux/>],
       ['Jquery', <SiJquery/>],
-      ['React', <SiReact/>],
       ['Bootstrap', <SiBootstrap/>],
       ['HTML', <SiHtml5/>],
       ['CSS', <SiCss3/>]
     ],
     'Back End' : [
-      ['Flask', <SiFlask/>],
       ['Django', <SiDjango/>],
+      ['Flask', <SiFlask/>],
       ['Express', <SiExpress/>],
       ['MongoDB', <SiMongodb/>],
       ['MySQL', <SiMysql/>], 

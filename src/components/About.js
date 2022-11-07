@@ -14,7 +14,7 @@ export const About = () => {
   const aboutLine2 =  'I love solving problems, brainstroming ideas and converting them into innovative products. '+
     'Having a sharp eye for product development process helps me prioritize tasks, iterate fast and deliver faster.'
 
-  const resumeLink = 'https://drive.google.com/file/d/1K40E0R3F-cspoegemOoXa4Jrl7LBTXN3/view'
+  const resumeLink = 'https://drive.google.com/file/d/1dpMTlQTtMgqdVATyruVxb9ehFAOhHz70/view?usp=sharing'
 
   return (
     <section className="about" id="about">

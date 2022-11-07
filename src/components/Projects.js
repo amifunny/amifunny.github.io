@@ -61,7 +61,7 @@ export const Projects = () => {
       tags: ["MongoDB", "Express", "React", "Redux",
              "Material UI", "CKEditor"],
       liveLink: 'https://pro-manage-hks.herokuapp.com/',
-      codeLink: 'https://github.com/amifunny/trend-store' 
+      codeLink: 'https://github.com/amifunny/pro-manage' 
     },
     {
       title: "Save Your Head",
@@ -88,9 +88,7 @@ export const Projects = () => {
 
     {
       title: "Piano Synth",
-      description: "A Chrome extension to read and write comments on any web url."+
-      " It is a complete discussion platform in form of extension."+
-      " It allows mentions and notifications as well.",
+      description: "A Bubbly-Virtual Piano with auto-generated key assist using deep learning.",
       viewType: "image",
       viewUrls: [piano1, piano2, piano3],
       tags: ["React", "TensorFlow", "Flask", "HTML", "CSS"],
@@ -131,6 +129,14 @@ export const Projects = () => {
                 <h2>Projects</h2>
                 <Row className="proj-row">
                   <Col md={8}>
+
+                    <Row className="proj-card">
+                      <Col md={12}  className="text-center">
+                      <h6>
+                      Note - Live website of projects may take some time to load because of shared instances. Kindly wait for 30 to 60 seconds.
+                      </h6>
+                      </Col>
+                    </Row>
 
                     {
                       projectsData.map( (project, i) => {
