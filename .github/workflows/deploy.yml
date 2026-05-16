@@ -1,0 +1,56 @@
+name: Build & Deploy to amifunny.github.io
+
+on:
+  push:
+    branches: [source]
+  workflow_dispatch:
+
+# Required for the action to push to the main branch with GITHUB_TOKEN
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          ref: source
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      # Required for the homepage to resolve at the root of a *.github.io site
+      - name: Add CNAME / SPA fallback
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
+
+      - name: Deploy to main branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: main
+          # Force-pushes the built artifact to main — main is the deploy target,
+          # never edit it directly. The source of truth lives on the `source` branch.
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Build & deploy ${{ github.sha }}'
