@@ -31,8 +31,7 @@ export function Contact() {
               {profile.available}
             </span>{' '}
             for engineering roles at product companies. If you are building
-            anything interesting in realtime systems, AI tooling or developer
-            experience, I would love to chat.
+            anything interesting, I would love to chat.
           </p>
         </div>
 

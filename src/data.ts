@@ -116,6 +116,46 @@ export const projects: Project[] = [
     ],
     accent: 'zap',
   },
+  {
+    name: 'Trend Store',
+    tagline: 'Full-stack e-commerce with admin panel',
+    description:
+      'PayPal checkout, JWT auth, AWS S3 media, Redux state. React + Django stack with a custom admin panel for inventory, banners and order status.',
+    stack: ['Django', 'React', 'PostgreSQL', 'Redux', 'PayPal', 'S3'],
+    status: 'shipped',
+    links: [{ label: 'github', href: 'https://github.com/amifunny/trend-store' }],
+    accent: 'electric',
+  },
+  {
+    name: 'PetSpot',
+    tagline: 'Social network for pet owners',
+    description:
+      'MERN-stack Instagram for pets. Posts, comments, follows, saved galleries, Pinterest-style discovery. Cloudinary media, Gravatar fallbacks.',
+    stack: ['MongoDB', 'Express', 'React', 'Bootstrap', 'Redux', 'Cloudinary'],
+    status: 'shipped',
+    links: [{ label: 'github', href: 'https://github.com/amifunny/PetSpot' }],
+    accent: 'mint',
+  },
+  {
+    name: 'Pro-Manage',
+    tagline: 'Kanban for tiny teams',
+    description:
+      'Online Kanban board with drag-and-drop cards, custom board icons, favorites, CKEditor-rich descriptions. Material UI + Redux + MongoDB.',
+    stack: ['MongoDB', 'Express', 'React', 'Redux', 'Material UI'],
+    status: 'shipped',
+    links: [{ label: 'github', href: 'https://github.com/amifunny/pro-manage' }],
+    accent: 'zap',
+  },
+  {
+    name: 'Save Your Head',
+    tagline: 'Local co-op arcade silliness',
+    description:
+      'Two-player local co-op chaos. Boxes that try to sit on each other while dodging lasers, bombs and 2x boosters.',
+    stack: ['Python', 'PyGame'],
+    status: 'shipped',
+    links: [{ label: 'github', href: 'https://github.com/amifunny/Save-Your-Head' }],
+    accent: 'hot',
+  },
 ];
 
 export const skills: { group: string; items: string[] }[] = [

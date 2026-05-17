@@ -14,7 +14,9 @@ export function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'translate-y-0' : '-translate-y-0'
+        scrolled
+          ? 'translate-y-0 bg-paper/85 backdrop-blur-sm border-b-2 border-ink/70'
+          : 'translate-y-0 bg-transparent border-b-2 border-transparent'
       }`}
     >
       <div className="wrap flex items-center justify-between py-4">
